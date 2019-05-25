@@ -3,7 +3,12 @@ import { NavLink } from "react-router-dom"
 
 // import {link, Switch, Route, BrowserRouter} from 'react-router-dom';
 class Header extends Component {
-  render(){
+ 
+    SignOut(){
+        localStorage.clear();
+    }
+ 
+    render(){
     return(
     <div>
       <ul>
@@ -15,14 +20,9 @@ class Header extends Component {
           <li>
             {/* <link to='/SignUp'>SignUp</link> */}
             {/* <a href="/SignUp">SignUp</a> */}
-            <NavLink to="/signup" >SignUp</NavLink>
+            <NavLink to="/homepage" onClick={this.SignOut.bind(this)} >Sign Out</NavLink>
           </li>
-        <li>
-        {/* <link to='/Login'>Login </link> */}
-        {/* <a href="/Login">Login</a> */}
-        <NavLink to="/login" >Login</NavLink>
-        </li>
-        
+      
     </ul>
   </div>
     )

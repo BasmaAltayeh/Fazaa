@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Map, Marker, InfoWindow, GoogleApiWrapper} from 'google-maps-react';
 import CurrentLocation from './currentLocation';
 import {NavLink} from "react-router-dom"
+import Header from './signoutHeader';
 
 
 // the class tha'll hold our map
@@ -57,12 +58,11 @@ updateP(){
                     })
                 }
             }
-    SignOut(){
-        localStorage.clear();
-    }
+   
     render() {
         return (
             <div>
+                <Header/>
                 <div id='btnBox'>
                   
                     <NavLink to="/driver">

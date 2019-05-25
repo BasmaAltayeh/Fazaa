@@ -1,5 +1,7 @@
 import React from "react";
 import {Redirect} from "react-router-dom"
+import Header from './Header';
+
 
 
 class Login extends React.Component {
@@ -85,6 +87,7 @@ class Login extends React.Component {
 	
 		return (
 			<div>
+				<Header/>
 				{auth ? <Redirect to={{pathname:'/main-map'}} /> :(
 					<div className="sign">
 					<div className="user">
