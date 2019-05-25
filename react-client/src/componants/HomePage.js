@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Header from './Header';
 
 class HomePage extends Component {
 	render() {
 		return (
 			<div className="gallary">
+				<Header/>
 				<img id="mainImg" src="https://i.ibb.co/N6WGHVb/header-2.png" alt="mainbackground" />
 				<div className="row">
 					<div className="col-md-6">
